@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MLOBOX AI for Marketplace</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <header>MLOBOX AI <span>for Marketplace</span></header>
+
+    <section id="logged-out" hidden>
+      <p>Log in to app.mlobox.ai first.</p>
+      <a href="https://app.mlobox.ai" target="_blank" class="btn">Open app.mlobox.ai</a>
+    </section>
+
+    <section id="logged-in" hidden>
+      <div class="user">
+        <div id="user-name"></div>
+        <div id="user-email" class="muted"></div>
+      </div>
+
+      <label class="row">
+        <span>Enabled</span>
+        <input type="checkbox" id="enabled" class="switch" />
+      </label>
+
+      <div class="row">
+        <span>Mode</span>
+        <div class="segmented">
+          <label><input type="radio" name="mode" value="assist" /> Assist</label>
+          <label><input type="radio" name="mode" value="auto" /> Auto</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <span>Replies today</span>
+        <strong id="count">0</strong>
+      </div>
+
+      <label class="row muted small">
+        <span>Mock API</span>
+        <input type="checkbox" id="mock" />
+      </label>
+
+      <div id="debug" hidden>
+        <button id="capture" class="btn">Capture page</button>
+        <div id="capture-status" class="muted small"></div>
+      </div>
+    </section>
+
+    <script type="module" src="./popup.ts"></script>
+  </body>
+</html>

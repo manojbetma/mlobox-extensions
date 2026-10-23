@@ -1,0 +1,15 @@
+{
+  "name": "mlobox-marketplace-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit && vite build",
+    "dev": "vite build --watch"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.270",
+    "typescript": "^5.5.0",
+    "vite": "^5.4.0"
+  }
+}

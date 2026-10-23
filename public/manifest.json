@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "MLOBOX AI for Marketplace",
+  "version": "0.1.0",
+  "description": "AI replies for Facebook Marketplace messages, powered by MLOBOX.",
+  "permissions": [
+    "storage",
+    "alarms",
+    "cookies",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.mlobox.ai/*",
+    "https://www.facebook.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.facebook.com/marketplace/*",
+        "https://www.facebook.com/messages/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "MLOBOX AI for Marketplace",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
